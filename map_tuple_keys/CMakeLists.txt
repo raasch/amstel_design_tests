@@ -8,3 +8,4 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build)
 include_directories("${PROJECT_SOURCE_DIR}/..")
 
 add_executable(test_map_NxN ${PROJECT_SOURCE_DIR}/test_map_NxN.cpp)
+add_executable(test_map_NxNxN ${PROJECT_SOURCE_DIR}/test_map_NxNxN.cpp)

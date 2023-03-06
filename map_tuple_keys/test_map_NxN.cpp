@@ -6,13 +6,14 @@ using namespace std;
 
 
 /*
-In this file, we test std::map with a custom index class that models tuples of integers.
-We suspect that reading from a filled std::map can become expensive for more complex keys
-(and a more complex < operator), compared to maps that only use integers.
+In this file, we test std::map with a custom index class that models
+tuples of integers. We suspect that reading from a filled std::map can become
+expensive for more complex keys (and a more complex < operator), compared to
+maps that only use integers.
 We enumerate tuples (j,k) of nonnegative integers by a bijection nr() to the nonnegative
 integers based on Cantor's diagonal argument: Each key (j,k) sits on the antidiagonal line
 of all nonnegative tuples with sum j+k. The number of elements on and below this antidiagonal
-is equal to (j+k)*(j+k+1)/2, so that the enumeration
+is equal to (j+k)*(j+k+1)/2, so that the enumeration function
   nr(j,k)=(j+k)*(j+k+1)/2+j
 yields the bijection
   (0,0) -> 0,
