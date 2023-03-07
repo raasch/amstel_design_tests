@@ -35,19 +35,24 @@ class Key{
     Key(int x, int y)
     {j=x;k=y;}
 
-    
+    inline
     long int nr()
     {
         return (j+k)*(j+k+1)/2+j;
     }
+
+    inline
     bool operator<(const Key& vgl)
     {
         return((j < vgl.j) || ((j == vgl.j) && (k < vgl.k))); 
-    }    
+    }
+
+    inline    
     bool operator!=(const Key& vgl)
     {
         return (j!=vgl.j || k!=vgl.k);
     }
+
     friend ostream &operator<< (ostream &ostr, const Key &o);
     
 };
@@ -80,7 +85,7 @@ int main(){
 // upper bound for N
 int N=500;
 
-map<Key,float,Key_Compare> map_Key; //lexicograffical sorting
+map<Key,float,Key_Compare> map_Key; //lexicographical sorting
 map<Key,float,Key_Compare2> map_Key2;//sorting with nr()
 map<long int, float> map_int;       //standard map with long int 
 
