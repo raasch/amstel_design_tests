@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.12)
 
 project(AMSTeL_design_tests_custom_iterators)
 
@@ -8,3 +8,4 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build)
 include_directories("${PROJECT_SOURCE_DIR}/..")
 
 add_executable(test_custom_iterators ${PROJECT_SOURCE_DIR}/test_custom_iterators.cpp)
+target_compile_features(test_custom_iterators PUBLIC cxx_std_20)
