@@ -40,19 +40,25 @@ class Key{
         j=x;k=y;l=z;
     }
 
+    inline
     long int nr()
     {    
         return (pow(j+k+l,3)+pow(j+k+l,2)*3+(j+k+l)*2)/6+((j+k)*(j+k+1))/2+j;
     }
 
+    inline
     bool operator<(const Key& vgl)
     {
         return((j<vgl.j)||((j==vgl.j)&&(k<vgl.k))||((j==vgl.j)&&(k==vgl.k)&&(l<vgl.l)));
     }
+
+    inline
     bool operator==(const Key& vgl)
     {
         return (j==vgl.j && k==vgl.k && l==vgl.l);
     }
+
+    inline
     bool operator!=(Key vgl)
     {
         return (j!=vgl.j || k!=vgl.k || l!=vgl.l);
@@ -81,7 +87,7 @@ struct Key_Compare
 
 int main(){
 //upper bound for N
-int N=50;
+int N=100;
 
 map<Key,double,Key_Compare> map_Key; //lexicographical sorting
 unordered_map<long int, double> unordered_map_int;
