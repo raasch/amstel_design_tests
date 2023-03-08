@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.12)
 
 project(AMSTeL_design_tests_map_iterators)
 
@@ -8,3 +8,4 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build)
 include_directories("${PROJECT_SOURCE_DIR}/..")
 
 add_executable(test_map_iterators ${PROJECT_SOURCE_DIR}/test_map_iterators.cpp)
+target_compile_features(test_map_iterators PUBLIC cxx_std_20)
